@@ -1,0 +1,58 @@
+#include "windows.h"
+#include "generic.h"
+#include "winver.h"
+
+MYAPP ICON  DISCARDABLE "GENERIC.ICO"
+SMALL ICON  DISCARDABLE "SMALL.ICO"
+
+GENERIC MENU DISCARDABLE
+BEGIN
+   POPUP "&File"
+   BEGIN
+      MENUITEM "&Test!",            IDM_TEST
+      MENUITEM "&Beep",				IDH_CANCEL
+	  MENUITEM "E&xit",				IDM_EXIT
+   END
+   POPUP "&Help"
+   BEGIN
+      MENUITEM "&About MyApp...",   IDM_ABOUT
+   END
+END
+
+1 VERSIONINFO
+ FILEVERSION 3,3,0,0
+ PRODUCTVERSION 3,3,0,0
+ FILEFLAGSMASK 0X3fl
+#ifdef _DEBUG
+   FILEFLAGS 0xbl
+#else
+   FILEFLAGS 0xal
+#endif
+ FILEOS 0X4L
+ FILETYPE 0X1L
+ FILESUBTYPE 0X0L
+BEGIN
+   BLOCK "StringFileInfo"
+   BEGIN
+      BLOCK "040904B0"
+      BEGIN
+         VALUE "CompanyName", "GenericCompany\0"
+         VALUE "FileDescription", "GenericApplication\0"
+         VALUE "FileVersion", "1.0\0"
+         VALUE "InternalName", "1.0\0"
+         VALUE "LegalCopyright", "Copyright \251 Generic Company. 1997\0"
+         VALUE "LegalTrademarks", "Generic Trademark.\0"
+         VALUE "OriginalFilename", "\0"
+         VALUE "ProductName", "Generic Application.\0"
+         VALUE "ProductVersion", "1.0\0"
+      END
+   END
+   BLOCK "VarFileInfo"
+   BEGIN
+      VALUE "Translation", 0x409, 1200
+   END
+END
+
+
+
+
